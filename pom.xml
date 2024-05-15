@@ -7,6 +7,7 @@
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    <!--<packaging>war</packaging>-->
 
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
@@ -30,6 +31,17 @@
 
 
     <dependencies>
+
+        <!--&lt;!&ndash;当打war包到tomcat时，自动排除内置的tomcat，避免二者产生冲突&ndash;&gt;-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+            <!--&lt;!&ndash;打包的时候可以不用包进去，别的设施会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。-->
+                <!--相当于compile，但是打包阶段做了exclude操作&ndash;&gt;-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <!-- 添加这个依赖之后就可以创建一个web应用程序。starter poms部分可以引入所有需要在实际项目中使用的依赖。
@@ -84,6 +96,13 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
             </plugin>
 
             <!--<plugin>-->
