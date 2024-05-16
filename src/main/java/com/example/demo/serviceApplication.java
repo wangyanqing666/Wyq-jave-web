@@ -51,6 +51,20 @@ public class serviceApplication {
 
         }
 
+        int count = 100;
+        return "page num:="+num;
+    }
+    @RequestMapping("HJ/{num}")
+    String HJ(HttpServletRequest request,@PathVariable Integer num) {
+//        String userName = "Jef";
+        if( num == 1 ){
+            System.out.print("这是 if dfhdughdsiaaaaaughdaiuhfuadih 语句1");
+        }else if (num == 2 ){
+            System.out.print("这是 else 语句2");
+        }else{
+            System.out.print("这是 else 语句3");
+
+        }
 
         int count = 100;
         return "page num:="+num;
