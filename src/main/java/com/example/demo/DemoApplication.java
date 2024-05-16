@@ -23,7 +23,7 @@ public class DemoApplication {
             System.out.print("这是 if 语句1");
         }else if ( userName=="Jef" ){
             System.out.print("这是 else 语句2");
-        },else if ( userName=="wyqtest" ){
+        }else if ( userName=="wyqtest" ){
             System.out.print("这是wyqtest");
         }else{
             System.out.print("这是 else 语句3");
