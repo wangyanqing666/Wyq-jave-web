@@ -27,6 +27,8 @@ public class serviceApplication {
             System.out.print("新增346e4");
         } else if ( "zhm".equals(userName) ){
             System.out.print("新增4");
+        }else if ( "hej".equals(userName) ){
+            System.out.print("我市新增的hej");
         }else{
             System.out.print("这是 else 语句334");
 
