@@ -42,6 +42,28 @@ public class DemoApplication {
     @RequestMapping("zhuce/{userName}")
     String zhuce(HttpServletRequest request, @PathVariable String userName) {
         if( "wyq".equals(userName) ){
+            System.out.print("王艳青-改代码了");
+        }else if ( "lsj".equals(userName) ) {
+            System.out.print("这是 else 语句2244444");
+
+        } else if ( "jsh".equals(userName) ){
+            System.out.print("新增346e4");
+        } else if ( "zhm".equals(userName) ){
+            System.out.print("新增4");
+        }else if ( "hej".equals(userName) ){
+            System.out.print("王艳青-改代码了");
+        }else{
+            System.out.print("这是 else 语句334");
+
+        }
+
+
+        int count = 100;
+        return "欢迎您" + userName + "，这是您的第 " + count + " 次登录";
+    }
+    @RequestMapping("zhuce1/{userName}")
+    String zhuce1(HttpServletRequest request, @PathVariable String userName) {
+        if( "wyq".equals(userName) ){
             System.out.print("这是 if 语句2225555");
         }else if ( "lsj".equals(userName) ) {
             System.out.print("这是 else 语句2244444");
@@ -61,10 +83,10 @@ public class DemoApplication {
         int count = 100;
         return "欢迎您" + userName + "，这是您的第 " + count + " 次登录";
     }
-    @RequestMapping("zhuce1/{userName}")
-    String zhuce1(HttpServletRequest request, @PathVariable String userName) {
+    @RequestMapping("zhuce2/{userName}")
+    String zhuce2(HttpServletRequest request, @PathVariable String userName) {
         if( "wyq".equals(userName) ){
-            System.out.print("这是 if 语句2225555");
+            System.out.print("我是新增的");
         }else if ( "lsj".equals(userName) ) {
             System.out.print("这是 else 语句2244444");
 
